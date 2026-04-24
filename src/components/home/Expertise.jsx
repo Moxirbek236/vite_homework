@@ -41,5 +41,4 @@ function Expertise() {
     </section>
   )
 }
-
 export default Expertise

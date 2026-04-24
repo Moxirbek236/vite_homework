@@ -4,14 +4,10 @@ export const careerInnerHero = {
   description:
     "Through True Rich Attended does no end it his mother since real had half every him case in packages.",
   summary: [
-    "Remote, India",
-    "4 to 5 Years Of Experience",
+    "Remote, India , 4 to 5 Years Of Experience",
     "Department: Product Engineering",
-    "Full Time",
-    "5 Position Available",
+    "Full Time 5 Position Available.",
   ],
-  image: "/careers.jpg",
-  imageAlt: "Career detail banner",
   cta: "Apply Now",
 };
 
@@ -24,6 +20,10 @@ export const careerInnerSections = [
       "Publish posts on various social media channels.",
       "Promote content on social networks and monitor engagement such as comments and shares.",
       "Research industry-related topics.",
+      "Editing audio and sound design on projects.",
+      "Engage in opportunities to develop original content and concepts for web and mobile.",
+      "Create motion graphics and animations using 2D and 3D applications for marketing and promotional usage.",
+      "Manage the day-to-day handling of all social media channels such as LinkedIn, Facebook, Twitter, Pinterest, Instagram, Tiktok and YouTube, adapting content to suit different channels.",
     ],
   },
   {

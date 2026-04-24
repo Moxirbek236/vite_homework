@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionContainer from "../shared/ui/SectionContainer";
 import SectionIntro from "../shared/ui/SectionIntro";
 import {
@@ -8,7 +9,10 @@ import {
 
 function TeamCard({ member }) {
   return (
-    <article className="group relative h-[320px] overflow-hidden bg-[#232536]">
+    <Link
+      to={`/team/${member.slug}`}
+      className="avatar group relative block h-[320px] overflow-hidden bg-[#232536] no-underline"
+    >
       <img
         src={member.image}
         alt={member.name}
@@ -29,13 +33,13 @@ function TeamCard({ member }) {
         <p className="mt-1 text-sm font-medium leading-5 text-white/70">{member.role}</p>
         <div className="mt-6 flex gap-4 text-xs font-semibold uppercase tracking-[2px] text-white">
           {companySocialIcons.map((icon) => (
-            <a key={`${member.name}-${icon.alt}`} href="#" className="no-underline">
+            <span key={`${member.name}-${icon.alt}`} className="no-underline">
               <img src={icon.src} alt={icon.alt} />
-            </a>
+            </span>
           ))}
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
 

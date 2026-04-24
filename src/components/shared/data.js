@@ -59,5 +59,9 @@ export const footerHref = {
   Services: "/service",
   Company: "/company",
   Careers: "/career",
-  Blog: "#",
+  Blog: "/blog",
 };
+
+export const resourceLinks = [
+  { label: "Privacy policy", href: "/privacy-policy" },
+];

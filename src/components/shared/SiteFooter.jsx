@@ -1,4 +1,5 @@
-import { footerHref, footerLinks, serviceLinks } from "./data";
+import { Link } from "react-router-dom";
+import { footerHref, footerLinks, resourceLinks, serviceLinks } from "./data";
 import CornerBlocks from "./ui/CornerBlocks";
 import SectionContainer from "../../assets/Negative.png";
 import SectionContainer1 from "../../assets/Negative1.png";
@@ -40,13 +41,13 @@ function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-[1fr_1fr_1fr] xl:justify-items-start xl:pt-2">
           <nav className="flex flex-col gap-3" aria-label="Footer navigation">
             {footerLinks.map((link) => (
-              <a
+              <Link
                 key={link}
-                href={footerHref[link]}
+                to={footerHref[link]}
                 className="font-medium leading-6 text-[#232536] no-underline hover:text-amber-400"
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -67,12 +68,15 @@ function SiteFooter() {
 
           <div>
             <h3 className="text-base font-semibold leading-7">Resources</h3>
-            <a
-              href="#"
-              className="mt-3 block text-sm leading-5 hover:text-amber-400 text-[#232536] no-underline"
-            >
-              Privacy policy
-            </a>
+            {resourceLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="mt-3 block text-sm leading-5 text-[#232536] no-underline hover:text-amber-400"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

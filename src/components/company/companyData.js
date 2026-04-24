@@ -2,14 +2,6 @@ import Image1 from "../../assets/Image 1.png";
 import Image2 from "../../assets/Image 2.png";
 import Image3 from "../../assets/Image 3.png";
 import VisionImage from "../../assets/team/Image (6).png";
-import Team1 from "../../assets/team/Team 1.png";
-import Team2 from "../../assets/team/Team 2.png";
-import Team3 from "../../assets/team/Team 3.png";
-import Team4 from "../../assets/team/Team 4.png";
-import Team5 from "../../assets/team/Team 5.png";
-import Team6 from "../../assets/team/Team 6.png";
-import Team7 from "../../assets/team/Team 7.png";
-import Team8 from "../../assets/team/Team 8.png";
 import Logo1 from "../../assets/Logo.png";
 import Logo2 from "../../assets/Logo (1).png";
 import Logo3 from "../../assets/Logo (2).png";
@@ -21,6 +13,7 @@ import ExpertiseIcon3 from "../../assets/Icon Div (6).png";
 import twitterIcon from "../../assets/Negative2.png";
 import instagramIcon from "../../assets/Negative.png";
 import linkedinIcon from "../../assets/Negative1.png";
+import { teamMembers } from "../team/teamData";
 
 export const companyHero = {
   eyebrow: "Company",
@@ -105,16 +98,13 @@ export const companyTeamIntro = {
     "Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.",
 };
 
-export const companyTeamMembers = [
-  { name: "Javena Melo", role: "Support Assist", image: Team1, featured: true },
-  { name: "Ethan Cole", role: "Project Lead", image: Team2 },
-  { name: "Sophia Lane", role: "UI Designer", image: Team3 },
-  { name: "Noah Smith", role: "Frontend Dev", image: Team4 },
-  { name: "Olivia Ray", role: "QA Engineer", image: Team5 },
-  { name: "Liam Hall", role: "Product Owner", image: Team6 },
-  { name: "Mia Stone", role: "Backend Dev", image: Team7 },
-  { name: "Lucas Dean", role: "Growth Strategist", image: Team8 },
-];
+export const companyTeamMembers = teamMembers.map((member, index) => ({
+  slug: member.slug,
+  name: member.name,
+  role: member.cardRole ?? member.role,
+  image: member.image,
+  featured: index === 0,
+}));
 
 export const companySocialIcons = [
   { src: twitterIcon, alt: "Twitter" },

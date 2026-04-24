@@ -4,6 +4,11 @@ import Service from "./pages/Service"
 import Company from "./pages/Company"
 import Career from "./pages/Career"
 import CareerInner from "./pages/CareerInnerPage"
+import Blog from "./pages/Blog"
+import BlogInnerPage from "./pages/BlogInnerPage"
+import TeamTemplatePage from "./pages/TeamTemplatePage"
+import ContactUs from "./pages/ContactUs"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
 
 function App() {
   return (
@@ -14,6 +19,11 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/career" element={<Career />} />
         <Route path="/career/blog" element={<CareerInner />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/breaking-the-code" element={<BlogInnerPage />} />
+        <Route path="/team/:slug" element={<TeamTemplatePage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   )

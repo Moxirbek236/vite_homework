@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Arrow from "../shared/ui/Arrow";
 import SectionContainer from "../shared/ui/SectionContainer";
 
@@ -12,9 +13,9 @@ function TeamTemplatePostsSection({ member }) {
 
         <div className="mt-16 grid gap-8 xl:grid-cols-2">
           {member.posts.map((post) => (
-            <a
+            <Link
               key={`${member.slug}-${post.title}`}
-              href={post.href}
+              to={post.href}
               className="grid overflow-hidden bg-white text-inherit no-underline md:grid-cols-[296px_1fr]"
             >
               <img
@@ -35,7 +36,7 @@ function TeamTemplatePostsSection({ member }) {
                   <Arrow className="text-black" />
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </SectionContainer>

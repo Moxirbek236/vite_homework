@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import SectionContainer from "../shared/ui/SectionContainer";
 import { allPosts } from "./blogData";
 
 function BlogPostCard({ post }) {
   return (
-    <a href={post.href} className="block bg-white text-inherit no-underline">
+    <Link to={post.href} className="block bg-white text-inherit no-underline">
       <img src={post.image} alt={post.title} className="h-[266px] w-full object-cover" loading="lazy" />
       <div className="p-8">
         <h3 className="text-2xl font-semibold leading-9 text-[#232536]">{post.title}</h3>
@@ -16,7 +17,7 @@ function BlogPostCard({ post }) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

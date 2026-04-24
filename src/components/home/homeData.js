@@ -95,15 +95,15 @@ export const blogPosts = [
   {
     title: "Today's best design trends for digital products",
     date: "July 19, 2021",
-    href: "#",
+    href: "/blog/breaking-the-code",
     image: image1,
     alt: "Coworkers interacting",
   },
   {
     title: "A practical guide to building a brand strategy",
     date: "July 19, 2021",
-    href: "#",
+    href: "/blog",
     image: image2,
     alt: "Coworkers interacting",
-  }
+  },
 ];

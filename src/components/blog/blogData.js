@@ -61,7 +61,7 @@ export const recentPosts = [
     date: "Jan 19, 2021",
     image: recentImage2,
     avatar: avatar2,
-    href: "#",
+    href: "/blog",
   },
   {
     title: "How to make progress in product design this quarter",
@@ -69,7 +69,7 @@ export const recentPosts = [
     date: "Jan 19, 2021",
     image: recentImage3,
     avatar: avatar3,
-    href: "#",
+    href: "/blog/breaking-the-code",
   },
   {
     title: "Design systems that move faster without breaking trust",
@@ -77,7 +77,7 @@ export const recentPosts = [
     date: "Jan 19, 2021",
     image: recentImage4,
     avatar: avatar1,
-    href: "#",
+    href: "/blog",
   },
 ];
 
@@ -100,7 +100,7 @@ export const allPosts = [
     date: "Jan 19, 2021",
     image: cardImage2,
     avatar: avatar2,
-    href: "#",
+    href: "/blog",
   },
   {
     title: "Building a stronger product narrative across every platform",
@@ -110,7 +110,7 @@ export const allPosts = [
     date: "Jan 19, 2021",
     image: cardImage3,
     avatar: avatar3,
-    href: "#",
+    href: "/blog/breaking-the-code",
   },
   {
     title: "Designing digital services with trust and clarity in mind",
@@ -120,7 +120,7 @@ export const allPosts = [
     date: "Jan 19, 2021",
     image: cardImage4,
     avatar: avatar1,
-    href: "#",
+    href: "/blog",
   },
   {
     title: "We aim to attain the greatest satisfaction for our clients",
@@ -130,7 +130,7 @@ export const allPosts = [
     date: "Jan 19, 2021",
     image: cardImage5,
     avatar: avatar2,
-    href: "#",
+    href: "/blog/breaking-the-code",
   },
   {
     title: "What it takes to create more memorable product experiences",
@@ -140,6 +140,6 @@ export const allPosts = [
     date: "Jan 19, 2021",
     image: cardImage6,
     avatar: avatar3,
-    href: "#",
+    href: "/blog",
   },
 ];

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import SectionContainer from "../shared/ui/SectionContainer";
 import { recentPosts } from "./blogData";
 
 function RecentCard({ post }) {
   return (
-    <a
-      href={post.href}
+    <Link
+      to={post.href}
       className="grid overflow-hidden bg-[#F9F9FF] text-inherit no-underline md:grid-cols-[296px_1fr]"
     >
       <img src={post.image} alt={post.title} className="h-[248px] w-full object-cover" loading="lazy" />
@@ -20,7 +21,7 @@ function RecentCard({ post }) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

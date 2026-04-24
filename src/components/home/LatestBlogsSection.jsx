@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Arrow from "../shared/ui/Arrow";
 import SectionContainer from "../shared/ui/SectionContainer";
 import SectionIntro from "../shared/ui/SectionIntro";
@@ -21,9 +22,9 @@ function LatestBlogsSection() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           {blogPosts.map((post) => (
-            <a
+            <Link
               key={post.title}
-              href={post.href}
+              to={post.href}
               className="group grid overflow-hidden bg-white text-[#232536] no-underline sm:grid-cols-[248px_1fr]"
             >
               <div className="h-[220px] overflow-hidden sm:h-full">
@@ -45,7 +46,7 @@ function LatestBlogsSection() {
                   <Arrow className="text-black" />
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </SectionContainer>

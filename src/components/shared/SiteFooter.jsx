@@ -84,9 +84,9 @@ function SiteFooter() {
       <div className="bg-[#FFE6D2]">
         <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4 px-5 py-7 md:px-10 lg:px-16 xl:flex-row xl:items-center xl:justify-between xl:px-[160px]">
           <div className="flex flex-col gap-3 text-sm font-medium md:flex-row md:items-center md:gap-10">
-            <a className="text-2xl font-semibold text-[#232536] no-underline" href="/">
+            <Link className="text-2xl font-semibold text-[#232536] no-underline" to="/">
               {"{Finsweet"}
-            </a>
+            </Link>
             <span>&copy;2023 Finsweet</span>
           </div>
           <div className="flex gap-6 text-sm font-semibold">

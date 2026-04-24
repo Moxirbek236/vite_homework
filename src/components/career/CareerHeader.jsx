@@ -25,10 +25,9 @@ function CareerHeader() {
 
         <div className="relative mx-auto mt-16 max-w-[1265px]">
           <img
-            src="/public/careers.jpg"
+            src="/careers.jpg"
             alt={careerHero.imageAlt}
-            className="w-[1,099.78px] h-[
-194.94px] object-cover object-center mt-[200px] relative left-1/2 -translate-x-1/2"
+            className="relative left-1/2 mt-[200px] h-[194.94px] w-[1099.78px] -translate-x-1/2 object-cover object-center"
           />
         </div>
 

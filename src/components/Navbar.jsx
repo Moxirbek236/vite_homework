@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <header className="absolute left-0 top-0 h-20 w-full border-b border-white/5 bg-[#232536]">
       <div className="mx-auto flex h-full w-full max-w-[1600px] items-center gap-10 px-5 md:px-10 lg:px-16 xl:px-[160px]">
-        <a
+        <Link
           className="text-2xl font-semibold leading-none tracking-[0.2px] text-white no-underline"
-          href="#"
+          to="/"
         >
           {"{Finsweet"}
-        </a>
+        </Link>
 
         <nav
           className="ml-auto hidden items-center gap-7 md:flex"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Arrow from "../shared/ui/Arrow";
 import SectionContainer from "../shared/ui/SectionContainer";
 import { blogHero, blogSidebarPosts } from "./blogData";
@@ -37,13 +38,13 @@ function BlogHeader() {
             <p className="mt-6 max-w-[624px] text-base leading-6 text-[#232536]/85">
               {blogHero.description}
             </p>
-            <a
-              href={blogHero.href}
+            <Link
+              to={blogHero.href}
               className="mt-6 inline-flex items-center gap-3 text-base font-medium text-[#444CFC] no-underline"
             >
               <span>Read More</span>
               <Arrow className="text-black" />
-            </a>
+            </Link>
 
             <div className="mt-10 flex flex-wrap items-center gap-4 text-sm text-[#232536]/70">
               <AuthorRow avatar={blogSidebarPosts[0].avatar} author={blogHero.author} date={blogHero.date} />

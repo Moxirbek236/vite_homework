@@ -1,11 +1,6 @@
-const links = [
-  'Home',
-  'Service',
-  'Company',
-  'Career',
-  'Blog',
-  'Contact us',
-]
+import { Link, NavLink } from "react-router-dom";
+
+const links = ["Home", "Service", "Company", "Career", "Blog", "Contact us"];
 
 function Navbar() {
   return (
@@ -15,7 +10,7 @@ function Navbar() {
           className="text-2xl font-semibold leading-none tracking-[0.2px] text-white no-underline"
           href="#"
         >
-          {'{Finsweet'}
+          {"{Finsweet"}
         </a>
 
         <nav
@@ -23,20 +18,25 @@ function Navbar() {
           aria-label="Main navigation"
         >
           {links.map((link, index) => (
-            <a
-              key={link}
-              className={
-                index === 0
-                  ? "relative text-base font-medium leading-6 text-white no-underline before:absolute before:left-0 before:top-[-27px] before:w-full before:border-t-[3px] before:border-[#FFA155]"
-                  : 'text-base font-medium leading-6 text-white/60 no-underline transition-opacity hover:text-white'
+            <NavLink  
+              key={index}
+              to={
+                link === "Home"
+                  ? "/"
+                  : `/${link.toLowerCase().replace(/\s+/g, "-")}`
               }
-              href="#"
+              className={({ isActive }) =>
+                `text-base font-medium leading-6 no-underline transition-all duration-400 ${
+                  isActive
+                    ? "text-amber-400 border-t-2 border-amber-400 pt-2 mb-2"
+                    : "text-white/70 hover:text-amber-400"
+                }`
+              }
             >
               {link}
-            </a>
+            </NavLink>
           ))}
         </nav>
-
         <a
           className="ml-auto inline-flex items-center gap-[10px] text-base font-medium leading-6 text-[#FFD3AF] no-underline md:ml-0"
           href="#"
@@ -51,7 +51,7 @@ function Navbar() {
         </a>
       </div>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -4,6 +4,7 @@ import logo2 from '../assets/Logo (1).png'
 import logo3 from '../assets/Logo (2).png'
 import logo4 from '../assets/Logo (3).png'
 import logo5 from '../assets/Logo (4).png'
+import PrimaryButton from './shared/ui/PrimaryButton'
 
 const clientLogos = [
   logo1,
@@ -29,23 +30,9 @@ function Header() {
             can too with 1 week and a good attitude.
           </p>
 
-          <button
-            type="button"
-            className="group relative mt-10 inline-flex h-16 w-[219px] items-center justify-between bg-[#444CFC] px-8"
-          >
-            <span className="text-base font-medium leading-6 text-white/90">
-              Request Quote
-            </span>
-            <span className="text-sm text-white transition-transform group-hover:translate-x-1">
-              {'-->'}
-            </span>
-            <span className="absolute left-0 top-0 h-7 w-7">
-              <span className="absolute left-0 top-0 h-[11px] w-7 bg-[#666DFF]" />
-              <span className="absolute bottom-0 left-0 h-[8px] w-2 bg-[#666DFF]" />
-              <span className="absolute left-0 top-0 h-5 w-[18px] bg-[#FFA155]" />
-              <span className="absolute left-[8px] top-0 h-[11px] w-[11px] bg-[#FFD3AF]" />
-            </span>
-          </button>
+          <div className="mt-10">
+            <PrimaryButton>Request Quote</PrimaryButton>
+          </div>
         </div>
 
         <div className="relative hidden xl:block">
@@ -72,8 +59,8 @@ function Header() {
           </div>
 
           <div className="grid w-full grid-cols-2 gap-4 opacity-80 sm:grid-cols-3 lg:grid-cols-5 xl:max-w-[1061px]">
-            {clientLogos.map((logo) => (
-              <img src={logo} alt="" />
+            {clientLogos.map((logo, index) => (
+              <img key={index} src={logo} alt="" />
             ))}
           </div>
         </div>

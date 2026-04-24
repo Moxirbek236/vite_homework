@@ -1,6 +1,9 @@
-import Image1 from "../assets/Image 1.png";
-import Image2 from "../assets/Image 2.png";
-import Image3 from "../assets/Image 3.png";
+import Image1 from "../../assets/Image 1.png";
+import Image2 from "../../assets/Image 2.png";
+import Image3 from "../../assets/Image 3.png";
+import SectionIntro from "../shared/ui/SectionIntro";
+import TextLink from "../shared/ui/TextLink";
+import VerticalStripe from "../shared/ui/VerticalStripe";
 
 const stats = [
   { value: "1560+", label: "Project Delivered" },
@@ -19,14 +22,11 @@ function About() {
   return (
     <section className="mx-auto mt-[120px] w-full max-w-[1280px] px-5 pb-24 md:px-10 xl:px-0">
       <div className="grid gap-10 xl:grid-cols-[640px_547px] xl:gap-[92px]">
-        <div>
-          <p className="text-sm font-medium uppercase tracking-[3px] text-black/90">
-            About Us
-          </p>
-          <h2 className="mt-4 max-w-[640px] text-4xl font-semibold leading-tight text-[#232536] md:text-[48px] md:leading-[58px]">
-            The company leads entire webdesign process from concept to delivery.
-          </h2>
-        </div>
+        <SectionIntro
+          eyebrow="About Us"
+          title="The company leads entire webdesign process from concept to delivery."
+          titleClassName="max-w-[640px]"
+        />
 
         <div className="xl:pt-[43px]">
           <h3 className="text-[32px] font-semibold leading-[1.3] text-[#232536] md:text-[36px] md:leading-[54px]">
@@ -40,27 +40,24 @@ function About() {
         </div>
       </div>
 
-      <div className="mt-12 gap-0 flex w-full xl:gap-0">
-        <div className="w-[103%] flex gap-10 grid gap-4 xl:grid-cols-[418px_419px_403px_18px]">
-          {imageCards.map((card, index) => (
-            <div
-              key={index}
-              className={`h-[300px] overflow-hidden md:h-[380px] xl:h-[446px] ${card.width}`}
-            >
-              <img
-                src={card.src}
-                alt={`About visual ${index + 1}`}
-                className={`h-full w-full ${card.position} object-cover`}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="mt-12 grid w-full gap-4 xl:grid-cols-[418px_419px_403px_18px]">
+        {imageCards.map((card, index) => (
+          <div
+            key={index}
+            className={`h-[300px] overflow-hidden md:h-[380px] xl:h-[446px] ${card.width}`}
+          >
+            <img
+              src={card.src}
+              alt={`About visual ${index + 1}`}
+              className={`h-full w-full ${card.position} object-cover`}
+            />
+          </div>
+        ))}
 
-        <div className="relative hidden h-[446px] w-[18px] xl:block">
-          <span className="absolute left-0 top-0 h-[424px] w-[18px] bg-[#FFA155]" />
-          <span className="absolute left-0 top-[122px] h-[302px] w-[18px] bg-[#FFD3AF]" />
-          <span className="absolute left-0 top-[332px] h-[114px] w-[18px] bg-[#444CFC]" />
-        </div>
+        <VerticalStripe
+          className="hidden h-[446px] xl:block"
+          widthClassName="w-[18px]"
+        />
       </div>
 
       <div className="mt-12 flex flex-col gap-8 xl:flex-row xl:items-end xl:justify-between">
@@ -81,13 +78,9 @@ function About() {
           ))}
         </div>
 
-        <a
-          href="#"
-          className="inline-flex items-center gap-3 text-base font-medium leading-6 text-[#444CFC] no-underline"
-        >
+        <TextLink href="#">
           Read about us
-          <span className="text-sm text-black">{"-->"}</span>
-        </a>
+        </TextLink>
       </div>
     </section>
   );
